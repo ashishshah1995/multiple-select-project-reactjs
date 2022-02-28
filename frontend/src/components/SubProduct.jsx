@@ -48,6 +48,7 @@ const SubProduct = ({
 
   return (
     <div style={{ margin: "0px 10px", background: "#bdbdbd" }}>
+      {/* Specifying to show all the sub products of selected sub category */}
       <ListLayout
         name="Sub Product"
         items={subProducts}

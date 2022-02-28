@@ -64,6 +64,7 @@ const Products = ({
           Done
         </Button>
       </div>
+      {/* Specifying to show all the products */}
       <ListLayout
         name="Product"
         items={products}

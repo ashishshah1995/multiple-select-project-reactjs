@@ -50,6 +50,7 @@ const SubCategory = ({
 
   return (
     <div style={{ margin: "0px 20px", background: "#90caf9" }}>
+      {/* Specifying to show all the sub categories of selected product */}
       <ListLayout
         name="Sub Category"
         items={subCategories}

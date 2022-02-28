@@ -83,9 +83,13 @@ const ListLayout = ({
             onChange={handleSearch}
           />
         </div>
+        {/* First we get all the products to be shown then when a user selects 
+        a product we click to get sub categories we get all the subcatogories which have the selected
+        product as the parent from subCategory.jsx and the same goes for the sub products */}
         <List>
           {searchFn.fn(items).map((item) => (
             <div key={item._id}>
+              {/* whenever a item is selected we maintain its state and updated it  */}
               <ListItemButton
                 onClick={() => {
                   handleClick(item.name);
@@ -94,6 +98,8 @@ const ListLayout = ({
                 <ListItemText>{item.name}</ListItemText>
                 {isSelected(item.name) && <DoneIcon />}
               </ListItemButton>
+              {/* Drop down is shown when a product is selcted then in the dropdown we specify
+                to show sub categories or when a sub category is selected then in dropdown we show sub products */}
               {!isSubProduct && isSelected(item.name) && (
                 <DropDown
                   subHeading={subHeading}
